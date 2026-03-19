@@ -1,65 +1,136 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXTERA-SYSTEMS | IA & INFRAESTRUCTURA</title>
+    <title>NEXTERA-SYSTEMS | Inteligencia Operativa e Infraestructura B2B</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #000; color: #fff; font-family: sans-serif; overflow-x: hidden; }
-        .glow-text { text-shadow: 0 0 15px rgba(0, 255, 255, 0.5); }
-        .bg-gradient { background: radial-gradient(circle at 50% 50%, #0a0a1a 0%, #000 80%); }
-        .ai-card { border: 1px solid rgba(0, 255, 255, 0.1); background: rgba(255,255,255,0.02); backdrop-blur: 10px; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0A0A0C; color: #94A3B8; overflow-x: hidden; }
+        .serif { font-family: 'Playfair Display', serif; }
+        
+        /* Fondo de flujo de datos dinámico style Apple */
+        .dynamic-bg {
+            background-image: radial-gradient(circle at center, #111 0%, #000 80%),
+                              linear-gradient(135deg, rgba(99,102,241,0.01) 0%, rgba(0,0,0,0) 100%);
+            background-size: cover;
+            animation: bgShift 15s ease infinite;
+        }
+        @keyframes bgShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Degradado de Texto IA Profesional (No fosforescente) */
+        .ai-gradient-text {
+            background: linear-gradient(135deg, #fff 0%, #6366F1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Efecto Glow Sutil para botones/títulos de IA */
+        .glow { text-shadow: 0 0 20px rgba(99,102,241,0.3); }
+        .btn-glow:hover { box-shadow: 0 0 30px rgba(99, 102, 241, 0.4); }
+
+        /* Estilo de Tarjetas IA */
+        .card-bg { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.04); backdrop-blur: 10px; }
+        .card-border-glow:hover { border-color: #6366F1; box-shadow: 0 0 20px rgba(99,102,241,0.1); }
     </style>
 </head>
-<body class="bg-gradient">
+<body class="antialiased dynamic-bg">
 
-    <nav class="fixed w-full z-50 p-6 flex justify-between items-center backdrop-blur-md">
-        <span class="font-bold tracking-[0.4em] text-xs">NEXTERA-SYSTEMS</span>
-        <a href="#contacto" class="border border-cyan-500 text-cyan-400 px-6 py-2 rounded-full text-xs uppercase tracking-widest hover:bg-cyan-500 hover:text-white transition">Consultoría IA</a>
+    <nav class="fixed w-full z-50 backdrop-blur-md border-b border-white/[0.03] bg-black/70">
+        <div class="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
+            <span class="text-white tracking-[0.5em] text-[10px] uppercase font-bold">Nextera-Systems</span>
+            <div class="flex space-x-12 text-[10px] tracking-widest uppercase text-white/50">
+                <a href="#evolucion" class="hover:text-white transition">Metodología</a>
+                <a href="#soluciones" class="hover:text-white transition">Soluciones IA</a>
+                <a href="#contacto" class="border border-indigo-500 text-indigo-400 px-5 py-2.5 rounded-full hover:bg-indigo-600/10 hover:border-indigo-500 transition btn-glow">Proyectar</a>
+            </div>
+        </div>
     </nav>
 
-    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
-        <h1 data-aos="zoom-in" class="text-6xl md:text-9xl font-black tracking-tighter mb-6 glow-text">
-            INTEGRACIÓN <br><span class="text-cyan-400 italic">TOTAL DE IA.</span>
+    <section class="min-h-screen flex flex-col items-center justify-center px-8 text-center" style="transform-style: preserve-3d;">
+        <span data-aos="fade-down" class="text-xs tracking-[0.6em] text-indigo-400 uppercase mb-8 block font-bold">Inteligencia Corporativa 2026</span>
+        <h1 data-aos="zoom-out" data-aos-duration="2500" class="text-6xl md:text-9xl font-bold tracking-tighter leading-none mb-10 text-white ai-gradient-text glow uppercase">
+            Sistemas que piensan.<br>Empresas que escalan.
         </h1>
-        <p data-aos="fade-up" data-aos-delay="400" class="max-w-2xl text-xl text-gray-400 font-light">
-            No vendemos páginas. Implementamos <strong>Sistemas Inteligentes</strong> que automatizan su empresa y escalan su autoridad al nivel del futuro.
+        
+        <p data-aos="fade-up" data-aos-delay="800" class="max-w-3xl text-xl md:text-2xl text-slate-400 leading-relaxed font-light mb-16" style="transform: translateZ(20px);">
+            Implementamos <strong>infraestructura digital inteligente</strong> que automatiza la captura de autoridad y optimiza la carga operativa de su organización. No es una web; es el motor autónomo de su crecimiento.
         </p>
+
+        <a href="#evolucion" data-aos="zoom-in" data-aos-delay="1500" class="inline-block border border-white text-white px-10 py-4 text-xs tracking-[0.4em] uppercase hover:bg-white hover:text-black transition duration-1000 btn-glow">
+            INICIAR EVOLUCIÓN
+        </a>
     </section>
 
-    <section class="py-32 px-6">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-            <div data-aos="fade-right" class="ai-card p-12 rounded-3xl border-l-4 border-l-cyan-500">
-                <h2 class="text-3xl font-bold mb-6 text-white uppercase tracking-tight">Soluciones Operativas</h2>
-                <p class="text-gray-400 leading-relaxed mb-6">Facilitamos el trabajo corporativo mediante agentes de IA que gestionan datos, atención y ventas de forma autónoma.</p>
-                <ul class="text-cyan-400 text-sm space-y-2">
-                    <li>+ Automatización de Procesos</li>
-                    <li>+ Análisis Predictivo B2B</li>
-                    <li>+ Infraestructura Escalable</li>
-                </ul>
+    <section id="evolucion" class="py-40 px-8 relative overflow-hidden bg-black/60 border-y border-white/[0.03]">
+        <div class="max-w-7xl mx-auto text-center mb-32">
+            <span data-aos="fade-down" class="text-[10px] tracking-[0.7em] text-gray-700 uppercase block mb-4">La Precisión es la Norma</span>
+            <h2 data-aos="fade-up" class="text-5xl md:text-7xl font-bold text-white tracking-tighter">¿Su empresa sigue en <span class="serif italic ai-gradient-text glow">la era analógica?</span></h2>
+            <p data-aos="fade-up" data-aos-delay="300" class="max-w-3xl text-lg text-slate-400 leading-relaxed mx-auto mt-12">
+                En la era de la IA, una web estática es un coste operativo y una fuga de capital B2B. Sus clientes buscan <strong>confianza técnica y autoridad automática</strong>, no un folleto digital.
+            </p>
+        </div>
+
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-24 items-center">
+            <div data-aos="fade-right" class="border-l border-white/10 pl-10">
+                <h3 class="text-white text-sm font-bold mb-4 uppercase tracking-widest text-glow">Tradición Web (Fricción)</h3>
+                <p class="text-sm leading-loose">Sitios pasivos que requieren intervención manual para captar leads. Una web sin IA es una oportunidad perdida en tiempo real.</p>
             </div>
-            <div data-aos="fade-left" class="ai-card p-12 rounded-3xl border-l-4 border-l-purple-500">
-                <h2 class="text-3xl font-bold mb-6 text-white uppercase tracking-tight">Estética y Poder</h2>
-                <p class="text-gray-400 leading-relaxed mb-6">Nuestros sistemas no solo funcionan; proyectan el estatus tecnológico que su empresa necesita para cerrar contratos de alto ticket.</p>
-                <div class="flex space-x-4">
-                    <div class="h-1 w-full bg-gray-800 rounded-full"><div class="h-1 w-3/4 bg-purple-500 rounded-full"></div></div>
-                </div>
+            <div data-aos="fade-left" data-aos-delay="500" class="border-l-2 border-indigo-500 pl-10 bg-[#0A0A0C] p-8 card-bg rounded-2xl">
+                <h3 class="text-white text-sm font-bold mb-4 uppercase tracking-widest text-glow">Nextera Systems (Conversión)</h3>
+                <p class="text-sm leading-loose text-gray-300">Infraestructura activa que captura datos, cualifica leads B2B y automatiza el seguimiento. <strong>Crecimiento autónomo.</strong></p>
             </div>
         </div>
     </section>
 
-    <section id="contacto" class="py-40 text-center">
-        <h3 data-aos="fade-up" class="text-sm tracking-[0.8em] text-gray-600 uppercase mb-12">El futuro es un sistema</h3>
-        <a href="mailto:proyectos@nextera-systems.com" class="text-4xl md:text-6xl font-bold hover:text-cyan-400 transition duration-700 underline decoration-cyan-500/20">
-            PROYECTOS@NEXTERA-SYSTEMS.COM
+    <section id="soluciones" class="py-40 px-8 bg-black/90 relative">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-10 text-left">
+            
+            <div data-aos="fade-up" data-aos-delay="100" class="p-10 card-bg rounded-3xl card-border-glow transition duration-700">
+                <span class="text-white/20 text-4xl block mb-6 font-bold">01</span>
+                <h3 class="text-lg font-bold mb-4 uppercase tracking-widest text-glow ai-gradient-text glow">Evolución</h3>
+                <p class="text-xs leading-loose text-gray-400">Diseñamos interfaces corporativas con UX inteligente. Su web aprende del usuario B2B, eliminando fricción.</p>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="300" class="p-10 card-bg rounded-3xl card-border-glow transition duration-700 mt-12">
+                <span class="text-white/20 text-4xl block mb-6 font-bold">02</span>
+                <h3 class="text-lg font-bold mb-4 uppercase tracking-widest text-glow ai-gradient-text glow">Optimización</h3>
+                <p class="text-xs leading-loose text-gray-400">Implementamos microservicios e IA que automatizan el 60% de los flujos de trabajo operativos de su organización.</p>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="500" class="p-10 card-bg rounded-3xl card-border-glow transition duration-700">
+                <span class="text-white/20 text-4xl block mb-6 font-bold">03</span>
+                <h3 class="text-lg font-bold mb-4 uppercase tracking-widest text-glow ai-gradient-text glow">Infraestructura</h3>
+                <p class="text-xs leading-loose text-gray-400">Arquitectura de grado Enterprise preparada para las tecnologías emergentes y el dominio de datos total.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-60 text-center relative border-t border-white/[0.03]">
+        <h2 data-aos="fade-down" class="text-xl tracking-[0.8em] text-white/20 uppercase mb-20 glow">¿Su empresa está lista para dominar?</h2>
+        <a href="mailto:estrategia@nextera-systems.com" data-aos="zoom-in" data-aos-delay="400" class="text-4xl md:text-7xl font-bold text-white hover:opacity-50 transition duration-1000 border border-white/5 px-10 py-5 hover:border-white/20 rounded-full btn-glow">
+            ESTRATEGIA@NEXTERA-SYSTEMS.COM
         </a>
     </section>
 
+    <footer class="py-12 px-8 border-t border-white/[0.03] text-center text-[10px] tracking-[0.5em] uppercase text-white/20 bg-black">
+        <p>© 2026 Nextera-Systems | Strategic Architecture B2B | IA Integrated</p>
+    </footer>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1200, once: false });
+        AOS.init({
+            once: false, // Las animaciones se repiten cada vez que bajás y subís
+            mirror: true, // Se activan tanto al bajar como al subir
+            duration: 1000, // Tiempo de la animación (en ms)
+            delay: 100, // Retraso sutil nativo para suavizar
+        });
     </script>
 </body>
 </html>

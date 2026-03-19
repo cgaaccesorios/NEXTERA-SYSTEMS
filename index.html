@@ -1,104 +1,146 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXTERA-SYSTEMS | Arquitectura de Futuro</title>
+    <title>NEXTERA-SYSTEMS | Inteligencia Operativa y Arquitectura Digital B2B</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #000; color: #fff; overflow-x: hidden; }
-        .apple-gradient {
-            background: linear-gradient(180deg, #111 0%, #000 100%);
+        body { font-family: 'Inter', sans-serif; background-color: #000; color: #a3a3a3; overflow-x: hidden; }
+        .moving-bg {
+            background: radial-gradient(circle at 50% 50%, #111 0%, #000 70%);
+            background-size: 200% 200%;
+            animation: gradientMove 10s ease infinite;
         }
-        .text-gradient {
-            background: linear-gradient(to right, #fff, #666);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
+        .text-glow { text-shadow: 0 0 20px rgba(255,255,255,0.2); }
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased moving-bg">
 
-    <nav class="fixed w-full z-50 backdrop-blur-xl border-b border-white/10 bg-black/50">
-        <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
-            <span class="text-[10px] tracking-[0.5em] uppercase font-bold text-white/90">Nextera-Systems</span>
-            <div class="flex space-x-8 text-[9px] tracking-widest uppercase text-white/50">
-                <a href="#vision" class="hover:text-white transition">Visión</a>
-                <a href="#sistemas" class="hover:text-white transition">Sistemas</a>
-                <a href="#contacto" class="hover:text-white transition border border-white/20 px-3 py-1 rounded-full">Consultar</a>
+    <nav class="fixed w-full z-50 backdrop-blur-xl border-b border-white/[0.03] bg-black/60">
+        <div class="max-w-7xl mx-auto px-8 h-16 flex items-center justify-between">
+            <span class="text-white tracking-[0.6em] text-[11px] uppercase font-bold">Nextera-Systems</span>
+            <div class="flex space-x-10 text-[9px] tracking-[0.3em] uppercase text-white/50">
+                <a href="#soluciones" class="hover:text-white transition">Soluciones</a>
+                <a href="#ia" class="hover:text-white transition">Inteligencia</a>
+                <a href="#contacto" class="hover:text-white transition border border-white/20 px-4 py-1.5 rounded-full">Proyectar</a>
             </div>
         </div>
     </nav>
 
-    <section class="min-h-screen flex flex-col items-center justify-center px-6 text-center apple-gradient">
-        <h1 data-aos="zoom-out" data-aos-duration="2000" class="text-6xl md:text-9xl font-bold tracking-tighter mb-8 text-gradient">
-            EL FUTURO ES <br> UN SISTEMA.
+    <section class="min-h-screen flex flex-col items-center justify-center px-8 text-center" style="transform-style: preserve-3d;">
+        <h1 class="text-6xl md:text-[10rem] font-bold tracking-tighter text-white leading-none mb-10 text-glow" style="transform: translateZ(50px);">
+            ARQUITECTURA <br> <span class="font-light italic text-white/80">INTELIGENTE</span>.
         </h1>
-        <p data-aos="fade-up" data-aos-delay="500" class="max-w-xl text-lg md:text-xl text-white/40 leading-relaxed font-light">
-            En <strong>NEXTERA-SYSTEMS</strong> no diseñamos páginas; construimos autoridad. Elevamos su empresa con soluciones estratégicas que garantizan escala.
+        <p class="max-w-2xl text-xl md:text-2xl text-white/50 leading-relaxed font-light mb-16" style="transform: translateZ(20px);">
+            En <strong>NEXTERA-SYSTEMS</strong> implementamos ecosistemas operativos avanzados que automatizan el crecimiento y proyectan autoridad absoluta en el mercado B2B.
         </p>
+        <a href="#contacto" class="inline-block border border-white text-white px-12 py-5 text-xs tracking-[0.4em] uppercase hover:bg-white hover:text-black transition duration-1000 rounded-full" style="transform: translateZ(10px);">
+            Implementar el futuro
+        </a>
     </section>
 
-    <section id="vision" class="py-40 px-6">
-        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-20 items-center">
-            <div data-aos="fade-right" class="border-l border-white/20 pl-8">
-                <h2 class="text-3xl font-bold mb-6 italic">Infraestructura de alto impacto.</h2>
-                <p class="text-white/50 leading-loose">
-                    Transformamos su visión en activos digitales. No se trata de estar en la red, sino de dominar el sector mediante ingeniería y estética funcional.
+    <section id="soluciones" class="py-40 px-8 relative bg-[#050505] border-y border-white/[0.03]">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-24 items-center">
+            <div class="border-l border-white/10 pl-10">
+                <span class="text-[10px] tracking-[0.4em] text-gray-700 uppercase block mb-4">Ingeniería Corporativa</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-8 tracking-tighter">Facilitamos su operación, escalamos sus ventas.</h2>
+                <p class="text-lg leading-relaxed text-gray-400">
+                    No creamos sitios estáticos; desarrollamos plataformas de alto rendimiento diseñadas para eliminar la fricción en la adquisición de clientes y optimizar cada flujo de trabajo corporativo. Su empresa necesita un sistema, no un folleto.
                 </p>
             </div>
-            <div data-aos="fade-left" data-aos-delay="300" class="bg-white/5 aspect-square flex items-center justify-center border border-white/10 rounded-2xl">
-                <div class="w-32 h-32 border-2 border-white/20 rounded-full animate-pulse flex items-center justify-center">
-                    <div class="w-16 h-16 border border-white/40 rounded-full"></div>
+            <div class="grid grid-cols-2 gap-6 relative">
+                <div class="bg-white/[0.02] border border-white/10 p-6 rounded-2xl animate-pulse">
+                    <span class="text-white text-2xl font-bold">+150%</span>
+                    <p class="text-[10px] uppercase text-gray-500">Eficiencia leads</p>
+                </div>
+                <div class="bg-white/[0.02] border border-white/10 p-6 rounded-2xl mt-12 animate-pulse" style="animation-delay: 1s;">
+                    <span class="text-white text-2xl font-bold">-60%</span>
+                    <p class="text-[10px] uppercase text-gray-500">Tiempo operativo</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="sistemas" class="py-40 bg-[#050505]">
-        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-12">
-            <div data-aos="fade-up" data-aos-delay="100" class="p-8 border border-white/5 bg-white/[0.02] rounded-3xl">
-                <span class="text-white/20 text-4xl block mb-6 font-bold">01</span>
-                <h3 class="text-lg font-bold mb-4 uppercase tracking-widest">Evolución</h3>
-                <p class="text-sm text-white/40 leading-relaxed">Sistemas escalables diseñados para la autoridad de marca global.</p>
+    <section id="ia" class="py-40 px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-24">
+                <span class="text-[10px] tracking-[0.6em] text-gray-700 uppercase block mb-4">Próxima Era</span>
+                <h2 class="text-5xl md:text-7xl font-bold text-white tracking-tighter">Domine con <span class="font-serif italic text-white/70">Inteligencia Artificial.</span></h2>
+                <div class="w-20 h-[1px] bg-white/20 mx-auto mt-10"></div>
             </div>
-            <div data-aos="fade-up" data-aos-delay="300" class="p-8 border border-white/5 bg-white/[0.02] rounded-3xl">
-                <span class="text-white/20 text-4xl block mb-6 font-bold">02</span>
-                <h3 class="text-lg font-bold mb-4 uppercase tracking-widest">Optimización</h3>
-                <p class="text-sm text-white/40 leading-relaxed">Eliminación de fricción operativa mediante interfaces inteligentes.</p>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="500" class="p-8 border border-white/5 bg-white/[0.02] rounded-3xl">
-                <span class="text-white/20 text-4xl block mb-6 font-bold">03</span>
-                <h3 class="text-lg font-bold mb-4 uppercase tracking-widest">Dominio</h3>
-                <p class="text-sm text-white/40 leading-relaxed">Arquitectura preparada para las tecnologías del mañana.</p>
+
+            <div class="grid md:grid-cols-2 gap-20 items-center">
+                <div class="bg-[#080808] p-12 rounded-3xl border border-white/[0.05] relative overflow-hidden group">
+                    <div class="absolute -inset-1 opacity-10 bg-gradient-to-r from-gray-700 to-white group-hover:opacity-20 transition duration-1000"></div>
+                    <div class="relative z-10">
+                        <svg class="w-12 h-12 text-white mb-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                        <h3 class="text-2xl font-bold text-white mb-6 tracking-tight">Soluciones de Automatización</h3>
+                        <p class="text-gray-400 leading-relaxed text-sm">Integramos modelos de IA y flujos automatizados que reemplazan tareas manuales, permitiendo que su equipo se enfoque en decisiones de alto valor estratégico.</p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 border-b border-white/10 pb-4">Beneficios de la IA NEXTERA</h3>
+                    <ul class="space-y-6 text-sm text-gray-400">
+                        <li><strong class="text-white">Escala Autónoma:</strong> Sus sistemas operan y captan leads 24/7 sin intervención humana directa.</li>
+                        <li><strong class="text-white">Predicción de Negocio:</strong> Algoritmos avanzados analizan datos para prever tendencias y comportamientos de mercado.</li>
+                        <li><strong class="text-white">Estética Inteligente:</strong> Interfaces que se adaptan dinámicamente según el comportamiento del usuario B2B.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contacto" class="py-60 text-center">
-        <h2 data-aos="fade-down" class="text-xl tracking-[0.6em] text-white/30 uppercase mb-12">¿Su empresa está lista?</h2>
-        <a data-aos="zoom-in" href="mailto:proyectos@nextera-systems.com" class="text-4xl md:text-6xl font-light tracking-tighter text-white hover:text-white/50 transition duration-1000">
+    <section id="contacto" class="py-60 text-center bg-[#050505] border-t border-white/[0.03]">
+        <h2 class="text-lg tracking-[0.7em] text-white/20 uppercase mb-16">¿Su organización está lista para dominar?</h2>
+        <a href="mailto:proyectos@nextera-systems.com" class="text-4xl md:text-6xl font-light tracking-tighter text-white hover:opacity-50 transition duration-1000 rounded-full border border-white/5 px-10 py-4 hover:border-white/20">
             PROYECTOS@NEXTERA-SYSTEMS.COM
         </a>
     </section>
 
-    <footer class="py-12 px-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-[0.4em] uppercase text-white/30">
+    <footer class="py-12 px-8 border-t border-white/[0.03] flex justify-between items-center text-[9px] tracking-[0.5em] uppercase text-white/20">
         <span>© 2026 Nextera-Systems</span>
-        <div class="flex space-x-8 mt-6 md:mt-0">
-            <a href="#" class="hover:text-white transition">LinkedIn</a>
-            <a href="#" class="hover:text-white transition">Instagram</a>
+        <div class="flex space-x-8">
+            <a href="#" class="hover:text-white Transition">LinkedIn</a>
+            <a href="#" class="hover:text-white Transition">Inteligencia</a>
         </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
     <script>
-        AOS.init({
-            once: false, // Permite que se repita el movimiento al subir y bajar
-            mirror: true,
-            duration: 1000,
+        // Smooth scroll nativo mejorado
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+    });
+            });
         });
+
+        // Parallax sutil en textos grandes y fondo para dar sensación de profundidad
+        var titles = document.querySelectorAll('h1, h2');
+        new simpleParallax(titles, {
+            orientation: 'up',
+            scale: 1.1,
+            overflow: true,
+            delay: 0.1,
+        });
+
+        // Movimiento suave para los bloques de IA
+        var iaBlocks = document.querySelectorAll('#ia > div > div > div');
+        new simpleParallax(iaBlocks, {
+            orientation: 'up',
+            scale: 1.05,
+            delay: 0.4,
+        });
+
     </script>
 </body>
 </html>

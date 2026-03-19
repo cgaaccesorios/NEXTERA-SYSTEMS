@@ -1,146 +1,88 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXTERA-SYSTEMS | Inteligencia Operativa y Arquitectura Digital B2B</title>
+    <title>NEXTERA-SYSTEMS | Inteligencia Operativa B2B</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #000; color: #a3a3a3; overflow-x: hidden; }
-        .moving-bg {
-            background: radial-gradient(circle at 50% 50%, #111 0%, #000 70%);
-            background-size: 200% 200%;
-            animation: gradientMove 10s ease infinite;
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0A0A0B; color: #94A3B8; }
+        .accent-gradient {
+            background: linear-gradient(135deg, #fff 0%, #6366F1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        @keyframes gradientMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        .text-glow { text-shadow: 0 0 20px rgba(255,255,255,0.2); }
+        .card-bg { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .btn-glow:hover { box-shadow: 0 0 20px rgba(99, 102, 241, 0.4); }
     </style>
 </head>
-<body class="antialiased moving-bg">
+<body class="antialiased">
 
-    <nav class="fixed w-full z-50 backdrop-blur-xl border-b border-white/[0.03] bg-black/60">
-        <div class="max-w-7xl mx-auto px-8 h-16 flex items-center justify-between">
-            <span class="text-white tracking-[0.6em] text-[11px] uppercase font-bold">Nextera-Systems</span>
-            <div class="flex space-x-10 text-[9px] tracking-[0.3em] uppercase text-white/50">
-                <a href="#soluciones" class="hover:text-white transition">Soluciones</a>
-                <a href="#ia" class="hover:text-white transition">Inteligencia</a>
-                <a href="#contacto" class="hover:text-white transition border border-white/20 px-4 py-1.5 rounded-full">Proyectar</a>
+    <nav class="fixed w-full z-50 backdrop-blur-xl border-b border-white/[0.03]">
+        <div class="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
+            <span class="text-white tracking-[0.4em] text-xs font-bold uppercase">Nextera-Systems</span>
+            <div class="flex space-x-10 text-[10px] tracking-widest uppercase">
+                <a href="#metodologia" class="hover:text-indigo-400 transition">Metodología</a>
+                <a href="#soluciones" class="hover:text-indigo-400 transition">Soluciones</a>
+                <a href="#contacto" class="bg-indigo-600 text-white px-5 py-2 rounded-full hover:bg-indigo-500 transition btn-glow">Agendar Auditoría</a>
             </div>
         </div>
     </nav>
 
-    <section class="min-h-screen flex flex-col items-center justify-center px-8 text-center" style="transform-style: preserve-3d;">
-        <h1 class="text-6xl md:text-[10rem] font-bold tracking-tighter text-white leading-none mb-10 text-glow" style="transform: translateZ(50px);">
-            ARQUITECTURA <br> <span class="font-light italic text-white/80">INTELIGENTE</span>.
+    <section class="min-h-screen flex flex-col items-center justify-center px-8 text-center pt-20">
+        <span class="text-indigo-400 text-[10px] tracking-[0.5em] uppercase mb-6 block font-bold">Inteligencia de Negocios 2026</span>
+        <h1 class="text-5xl md:text-8xl font-bold text-white tracking-tighter leading-none mb-8 accent-gradient">
+            Sistemas que piensan.<br>Empresas que escalan.
         </h1>
-        <p class="max-w-2xl text-xl md:text-2xl text-white/50 leading-relaxed font-light mb-16" style="transform: translateZ(20px);">
-            En <strong>NEXTERA-SYSTEMS</strong> implementamos ecosistemas operativos avanzados que automatizan el crecimiento y proyectan autoridad absoluta en el mercado B2B.
+        <p class="max-w-2xl text-lg md:text-xl text-slate-400 leading-relaxed font-light mb-12">
+            No entregamos sitios web. Implementamos <strong>infraestructura digital inteligente</strong> que optimiza la captura de datos y automatiza el crecimiento operativo de su organización.
         </p>
-        <a href="#contacto" class="inline-block border border-white text-white px-12 py-5 text-xs tracking-[0.4em] uppercase hover:bg-white hover:text-black transition duration-1000 rounded-full" style="transform: translateZ(10px);">
-            Implementar el futuro
-        </a>
     </section>
 
-    <section id="soluciones" class="py-40 px-8 relative bg-[#050505] border-y border-white/[0.03]">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-24 items-center">
-            <div class="border-l border-white/10 pl-10">
-                <span class="text-[10px] tracking-[0.4em] text-gray-700 uppercase block mb-4">Ingeniería Corporativa</span>
-                <h2 class="text-4xl md:text-5xl font-bold text-white mb-8 tracking-tighter">Facilitamos su operación, escalamos sus ventas.</h2>
-                <p class="text-lg leading-relaxed text-gray-400">
-                    No creamos sitios estáticos; desarrollamos plataformas de alto rendimiento diseñadas para eliminar la fricción en la adquisición de clientes y optimizar cada flujo de trabajo corporativo. Su empresa necesita un sistema, no un folleto.
-                </p>
+    <section id="metodologia" class="py-32 px-8">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+            <div class="card-bg p-10 rounded-3xl hover:border-indigo-500/30 transition duration-500">
+                <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-sm">Diagnóstico Estructural</h3>
+                <p class="text-sm leading-loose">Analizamos su flujo de trabajo actual para identificar cuellos de botella. Reducimos la fricción operativa en un 35% mediante reingeniería digital.</p>
             </div>
-            <div class="grid grid-cols-2 gap-6 relative">
-                <div class="bg-white/[0.02] border border-white/10 p-6 rounded-2xl animate-pulse">
-                    <span class="text-white text-2xl font-bold">+150%</span>
-                    <p class="text-[10px] uppercase text-gray-500">Eficiencia leads</p>
+            <div class="card-bg p-10 rounded-3xl hover:border-indigo-500/30 transition duration-500">
+                <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-sm">Despliegue de IA</h3>
+                <p class="text-sm leading-loose">Integración de modelos de lenguaje y automatización de procesos (RPA). Transformamos tareas manuales en activos autónomos 24/7.</p>
+            </div>
+            <div class="card-bg p-10 rounded-3xl hover:border-indigo-500/30 transition duration-500">
+                <h3 class="text-white font-bold mb-4 uppercase tracking-widest text-sm">Escala Proyectada</h3>
+                <p class="text-sm leading-loose">Arquitectura diseñada para el crecimiento. Su plataforma evoluciona con el mercado, garantizando relevancia y dominio a largo plazo.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="soluciones" class="py-32 bg-indigo-600/5 border-y border-indigo-500/10">
+        <div class="max-w-5xl mx-auto px-8 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-16 tracking-tight">Facilitamos la complejidad tecnológica para líderes con visión.</h2>
+            <div class="grid md:grid-cols-2 gap-12 text-left">
+                <div class="border-l-2 border-indigo-500 pl-8">
+                    <h4 class="text-white font-bold mb-2">Soluciones Web Pro</h4>
+                    <p class="text-sm">Aplicaciones corporativas con carga instantánea y seguridad de grado bancario.</p>
                 </div>
-                <div class="bg-white/[0.02] border border-white/10 p-6 rounded-2xl mt-12 animate-pulse" style="animation-delay: 1s;">
-                    <span class="text-white text-2xl font-bold">-60%</span>
-                    <p class="text-[10px] uppercase text-gray-500">Tiempo operativo</p>
+                <div class="border-l-2 border-indigo-500 pl-8">
+                    <h4 class="text-white font-bold mb-2">Automatización IA</h4>
+                    <p class="text-sm">Bots de atención y analítica predictiva para toma de decisiones en tiempo real.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="ia" class="py-40 px-8">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-24">
-                <span class="text-[10px] tracking-[0.6em] text-gray-700 uppercase block mb-4">Próxima Era</span>
-                <h2 class="text-5xl md:text-7xl font-bold text-white tracking-tighter">Domine con <span class="font-serif italic text-white/70">Inteligencia Artificial.</span></h2>
-                <div class="w-20 h-[1px] bg-white/20 mx-auto mt-10"></div>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-20 items-center">
-                <div class="bg-[#080808] p-12 rounded-3xl border border-white/[0.05] relative overflow-hidden group">
-                    <div class="absolute -inset-1 opacity-10 bg-gradient-to-r from-gray-700 to-white group-hover:opacity-20 transition duration-1000"></div>
-                    <div class="relative z-10">
-                        <svg class="w-12 h-12 text-white mb-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
-                        <h3 class="text-2xl font-bold text-white mb-6 tracking-tight">Soluciones de Automatización</h3>
-                        <p class="text-gray-400 leading-relaxed text-sm">Integramos modelos de IA y flujos automatizados que reemplazan tareas manuales, permitiendo que su equipo se enfoque en decisiones de alto valor estratégico.</p>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-xl font-bold text-white mb-6 border-b border-white/10 pb-4">Beneficios de la IA NEXTERA</h3>
-                    <ul class="space-y-6 text-sm text-gray-400">
-                        <li><strong class="text-white">Escala Autónoma:</strong> Sus sistemas operan y captan leads 24/7 sin intervención humana directa.</li>
-                        <li><strong class="text-white">Predicción de Negocio:</strong> Algoritmos avanzados analizan datos para prever tendencias y comportamientos de mercado.</li>
-                        <li><strong class="text-white">Estética Inteligente:</strong> Interfaces que se adaptan dinámicamente según el comportamiento del usuario B2B.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contacto" class="py-60 text-center bg-[#050505] border-t border-white/[0.03]">
-        <h2 class="text-lg tracking-[0.7em] text-white/20 uppercase mb-16">¿Su organización está lista para dominar?</h2>
-        <a href="mailto:proyectos@nextera-systems.com" class="text-4xl md:text-6xl font-light tracking-tighter text-white hover:opacity-50 transition duration-1000 rounded-full border border-white/5 px-10 py-4 hover:border-white/20">
+    <section id="contacto" class="py-40 text-center">
+        <h2 class="text-sm tracking-[0.5em] text-indigo-400 uppercase mb-10">Consulte su próxima era</h2>
+        <a href="mailto:estrategia@nextera-systems.com" class="text-4xl md:text-7xl font-bold text-white hover:text-indigo-400 transition duration-700 tracking-tighter">
             PROYECTOS@NEXTERA-SYSTEMS.COM
         </a>
     </section>
 
-    <footer class="py-12 px-8 border-t border-white/[0.03] flex justify-between items-center text-[9px] tracking-[0.5em] uppercase text-white/20">
-        <span>© 2026 Nextera-Systems</span>
-        <div class="flex space-x-8">
-            <a href="#" class="hover:text-white Transition">LinkedIn</a>
-            <a href="#" class="hover:text-white Transition">Inteligencia</a>
-        </div>
+    <footer class="py-12 border-t border-white/5 text-center text-[10px] tracking-[0.4em] uppercase">
+        <p>© 2026 Nextera-Systems | Strategic Architecture</p>
     </footer>
 
-    <script src="https://unpkg.com/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
-    <script>
-        // Smooth scroll nativo mejorado
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-    });
-            });
-        });
-
-        // Parallax sutil en textos grandes y fondo para dar sensación de profundidad
-        var titles = document.querySelectorAll('h1, h2');
-        new simpleParallax(titles, {
-            orientation: 'up',
-            scale: 1.1,
-            overflow: true,
-            delay: 0.1,
-        });
-
-        // Movimiento suave para los bloques de IA
-        var iaBlocks = document.querySelectorAll('#ia > div > div > div');
-        new simpleParallax(iaBlocks, {
-            orientation: 'up',
-            scale: 1.05,
-            delay: 0.4,
-        });
-
-    </script>
 </body>
 </html>

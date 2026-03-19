@@ -3,73 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXTERA-SYSTEMS | Inteligencia Operativa e Infraestructura B2B</title>
+    <title>NEXTERA-SYSTEMS | Inteligencia Operativa y Arquitectura Digital B2B</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #000; color: #fff; overflow-x: hidden; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #050505; color: #a3a3a3; overflow-x: hidden; }
         .serif { font-family: 'Playfair Display', serif; }
-        .dynamic-bg { background-image: radial-gradient(circle at 50% 50%, #111 0%, #000 80%); }
-        .text-glow { text-shadow: 0 0 20px rgba(99, 102, 241, 0.4); } /* Brillo Indigo IA */
-        .ai-gradient { background: linear-gradient(135deg, #00ffff 0%, #6366f1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .btn-glow:hover { box-shadow: 0 0 20px rgba(99, 102, 241, 0.4); }
-        .ai-border { border: 1px solid rgba(0, 255, 255, 0.1); background: rgba(255, 255, 255, 0.01); position: relative; }
-        .ai-border::after { content: ''; position: absolute; inset: -1px; background: linear-gradient(135deg, rgba(0,255,255,0.2) 0%, rgba(99,102,241,0.2) 100%); z-index: -1; filter: blur(1px); }
+        .text-accent { color: #f9fafb; }
+        .border-accent { border-color: #4b5563; }
+        .glow { text-shadow: 0 0 20px rgba(255,255,255,0.1); }
         .tab-btn:hover, .tab-btn.active { border-color: #6366f1; color: #6366f1; }
         .computer-mockup { transform-origin: top left; transform: perspective(1000px) rotateY(-15deg) scale(0.9); transition: transform 0.5s ease-out; }
         .computer-mockup:hover { transform: perspective(1000px) rotateY(0deg) scale(1.0); }
     </style>
 </head>
-<body class="antialiased dynamic-bg overflow-x-hidden">
+<body class="antialiased overflow-x-hidden">
 
     <nav class="fixed w-full z-50 backdrop-blur-md border-b border-white/[0.03] bg-black/70">
-        <div class="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
-            <span class="text-[10px] tracking-[0.5em] uppercase font-bold text-white/90">Nextera-Systems</span>
-            <div class="flex space-x-8 text-[9px] tracking-widest uppercase text-white/50">
+        <div class="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
+            <span class="text-white tracking-[0.5em] text-[10px] uppercase font-bold">Nextera-Systems</span>
+            <div class="flex space-x-12 text-[10px] tracking-widest uppercase text-white/50">
                 <a href="#soluciones" class="hover:text-white transition">Soluciones</a>
                 <a href="#accion" class="hover:text-white transition">En Acción</a>
-                <a href="#contacto" class="border border-indigo-500/50 px-3 py-1 text-indigo-400 rounded-full hover:bg-indigo-600/10 hover:border-indigo-500 transition btn-glow">Proyectar</a>
+                <a href="#contacto" class="border border-indigo-500 text-indigo-400 px-5 py-2.5 rounded-full hover:bg-indigo-600/10 hover:border-indigo-500 transition btn-glow">Proyectar</a>
             </div>
         </div>
     </nav>
 
-    <section class="min-h-screen flex flex-col items-center justify-center px-8 text-center" style="transform-style: preserve-3d; background: radial-gradient(circle at center, #111 0%, #000 80%);">
+    <section class="min-h-screen flex flex-col items-center justify-center px-8 text-center parallax-bg" style="background-image: radial-gradient(circle at center, #111 0%, #000 80%); transform-style: preserve-3d;">
         <span data-aos="fade-down" class="text-xs tracking-[0.4em] uppercase mb-6 block text-gray-500">Business Systems Architecture</span>
-        <h1 data-aos="zoom-out" data-aos-duration="2000" class="text-6xl md:text-9xl font-bold tracking-tighter leading-none mb-10 text-glow ai-gradient" style="transform: translateZ(50px);">
+        <h1 data-aos="zoom-out" data-aos-duration="2000" class="text-6xl md:text-9xl font-bold tracking-tighter leading-none mb-12 uppercase glow text-white" style="transform: translateZ(50px);">
             ARQUITECTURA DE ALTO RENDIMIENTO PARA EL <span class="serif italic text-white/80">LIDERAZGO DIGITAL.</span>
         </h1>
-        
-        <p data-aos="fade-up" data-aos-delay="500" class="text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-16 text-white/50" style="transform: translateZ(20px);">
-            En <strong>NEXTERA-SYSTEMS</strong> no diseñamos páginas; construimos autoridad. Elevamos su empresa con soluciones estratégicas de <strong>Inteligencia Artificial</strong> que garantizan escala. Menos ruido, más conversión. Transforme su visión en infraestructura de futuro.
+        <p data-aos="fade-up" data-aos-delay="500" class="max-w-3xl text-xl md:text-2xl text-slate-400 leading-relaxed font-light mb-16" style="transform: translateZ(20px);">
+            En <strong>NEXTERA-SYSTEMS</strong> no diseñamos páginas; construimos autoridad. Elevamos su empresa con soluciones estratégicas de **Inteligencia Artificial** que garantizan escala. Menos ruido, más conversión. Transforme su visión en infraestructura de futuro.
         </p>
-
-        <a href="#soluciones" data-aos="zoom-in" data-aos-delay="1000" class="text-xs tracking-[0.3em] uppercase py-2 border-b-2 border-white text-white hover:text-indigo-400 hover:border-indigo-400 transition" style="transform: translateZ(10px);">
+        <a href="#soluciones" data-aos="zoom-in" data-aos-delay="1000" class="inline-block border border-white text-white px-10 py-4 text-xs tracking-[0.4em] uppercase hover:bg-white hover:text-black transition duration-1000 btn-glow" style="transform: translateZ(10px);">
             Implementar el futuro
         </a>
     </section>
 
-    <section id="soluciones" class="py-40 bg-[#030303] border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
-            <div data-aos="fade-up" data-aos-delay="100" class="p-8 border border-white/5 bg-white/[0.02] rounded-3xl ai-border">
-                <span class="text-white/20 text-4xl block mb-6 font-bold">01</span>
-                <h3 class="text-lg font-bold mb-4 uppercase tracking-widest ai-gradient">Evolución Digital</h3>
-                <p class="text-sm text-white/40 leading-relaxed">Sistemas escalables diseñados para la autoridad de marca global y autoridad absoluta.</p>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="300" class="p-8 border border-white/5 bg-white/[0.02] rounded-3xl ai-border">
-                <span class="text-white/20 text-4xl block mb-6 font-bold">02</span>
-                <h3 class="text-lg font-bold mb-4 uppercase tracking-widest ai-gradient">Optimización Operativa</h3>
-                <p class="text-sm text-white/40 leading-relaxed">Eliminación de fricción operativa mediante interfaces inteligentes y automatización.</p>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="500" class="p-8 border border-white/5 bg-white/[0.02] rounded-3xl ai-border">
-                <span class="text-white/20 text-4xl block mb-6 font-bold">03</span>
-                <h3 class="text-lg font-bold mb-4 uppercase tracking-widest ai-gradient">Dominio Mercado</h3>
-                <p class="text-sm text-white/40 leading-relaxed">Arquitectura preparada para las tecnologías del mañana y dominio total del mercado.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="accion" class="py-40 px-6 bg-[#050505] border-y border-white/5">
+    <section id="accion" class="py-40 px-8 bg-black/60 border-t border-white/5">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-24 items-center">
             <div data-aos="fade-right">
                 <span class="text-[10px] tracking-[0.4em] text-gray-700 uppercase block mb-4">Interacción Total B2B</span>
@@ -79,7 +54,7 @@
                     <button class="tab-btn px-4 py-1.5 text-xs uppercase tracking-wider border border-white/20 text-white rounded-full transition" onclick="switchDemo('ecommerce')">Sector Ecommerce</button>
                     <button class="tab-btn px-4 py-1.5 text-xs uppercase tracking-wider border border-white/20 text-white rounded-full transition" onclick="switchDemo('legal')">Sector Legal</button>
                 </div>
-                <div id="demo-description" class="text-lg leading-relaxed text-gray-400">
+                <div id="demo-description" class="text-lg leading-relaxed text-gray-400 space-y-4">
                     <h3 class="text-white font-bold mb-4">Taller Digital: Diagnóstico y Eficiencia Predictiva.</h3>
                     <p>Facilitamos el trabajo corporativo mediante agentes de IA que gestionan datos, atención y ventas de forma autónoma. Automatización de agendamiento y diagnóstico predictivo.</p>
                 </div>
@@ -96,19 +71,8 @@
         </div>
     </section>
 
-    <section id="contacto" class="py-60 text-center bg-[#030303]">
-        <h2 data-aos="fade-down" class="text-xl tracking-[0.7em] text-white/20 uppercase mb-16 text-glow">¿Su organización está lista para dominar?</h2>
-        <a data-aos="zoom-in" data-aos-delay="300" href="mailto:proyectos@nextera-systems.com" class="text-4xl md:text-6xl font-light tracking-tighter text-white hover:opacity-50 transition duration-1000 border border-white/5 px-10 py-4 hover:border-white/10 rounded-full btn-glow ai-gradient">
-            PROYECTOS@NEXTERA-SYSTEMS.COM
-        </a>
-    </section>
-
-    <footer class="py-12 px-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-[0.4em] uppercase text-white/20">
-        <span>© 2026 Nextera-Systems</span>
-        <div class="flex space-x-8 mt-6 md:mt-0">
-            <a href="#" class="hover:text-white Transition">LinkedIn</a>
-            <a href="#" class="hover:text-white Transition">Inteligencia</a>
-        </div>
+    <footer class="py-12 px-8 border-t border-white/[0.03] text-center text-[10px] tracking-[0.5em] uppercase text-white/20 bg-black">
+        <p>© 2026 Nextera-Systems | Strategic Architecture B2B | IA Integrated</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -119,15 +83,18 @@
         const demos = {
             taller: {
                 title: 'Taller Digital: Diagnóstico y Eficiencia Predictiva.',
-                text: 'Automatización de agendamiento y diagnóstico predictivo con IA. Aumento de eficiencia operativa.'
+                text: 'Automatización de agendamiento y diagnóstico predictivo con IA. Aumento de eficiencia operativa.',
+                mockup: `<div class="p-4 flex flex-col items-center justify-center h-full space-y-6"><svg class="w-20 h-20 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg><span class="text-2xl text-white font-bold tracking-tight">Diagnóstico Predictivo <span class="text-indigo-400">#AI-DRIVEN</span></span><div class="flex space-x-2"><div class="w-20 h-2 bg-indigo-600 rounded"></div><div class="w-20 h-2 bg-gray-700 rounded"></div></div></div>`
             },
             ecommerce: {
                 title: 'Ecommerce Global: Conversión Automatizada.',
-                text: 'Integración de analítica predictiva B2B y personalización dinámica del viaje de compra.'
+                text: 'Integración de analítica predictiva B2B y personalización dinámica del viaje de compra. Optimización de tasa de conversión.',
+                mockup: `<div class="p-4 flex flex-col items-center justify-center h-full space-y-6"><svg class="w-20 h-20 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg><span class="text-2xl text-white font-bold tracking-tight">Embudo de Ventas <span class="text-indigo-400">#OPTIMIZED</span></span><div class="w-32 h-1 bg-gradient-to-r from-indigo-600 to-indigo-400 rounded"></div></div>`
             },
             legal: {
                 title: 'Legal AI: Gestión y Automatización de Procesos.',
-                text: 'Implementación de sistemas inteligentes para el análisis de datos corporativos y gestión operativa.'
+                text: 'Implementación de sistemas inteligentes para el análisis de datos corporativos, gestión de casos y reducción de carga administrativa.',
+                mockup: `<div class="p-4 flex flex-col items-center justify-center h-full space-y-6"><svg class="w-20 h-20 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M3 6l3 1m0 0l-3 9a5 5 0 0010 0l-3-9m-3 1y1m0 1H6m0 2h3m3-3v1m0 1h3M6 21v-4a2 2 0 012-2h8a2 2 0 012 2v4"></path></svg><span class="text-2xl text-white font-bold tracking-tight">Gestión de Casos <span class="text-indigo-400">#INTELLIGENT</span></span><div class="h-2 w-48 bg-gray-800 rounded flex items-center p-0.5"><div class="h-1 w-3/4 bg-indigo-600 rounded"></div></div></div>`
             }
         };
 
@@ -140,11 +107,17 @@
             const desc = demos[sector];
             document.getElementById('demo-description').innerHTML = `<h3 class="text-white font-bold mb-4">${desc.title}</h3><p>${desc.text}</p>`;
 
-            // Actualizar Mockup
+            // Actualizar Mockup (con una animación sutil de carga)
             const mockup = document.getElementById('demo-mockup');
             mockup.classList.add('animate-pulse');
-            setTimeout(() => mockup.classList.remove('animate-pulse'), 500);
+            setTimeout(() => {
+                mockup.innerHTML = desc.mockup;
+                mockup.classList.remove('animate-pulse');
+            }, 500);
         }
+
+        // Cargar el primer demo por defecto al iniciar
+        window.onload = () => switchDemo('taller');
     </script>
 </body>
 </html>

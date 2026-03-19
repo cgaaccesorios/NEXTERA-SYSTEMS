@@ -1,76 +1,65 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth overflow-x-hidden">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXTERA-SYSTEMS | Inteligencia Operativa e Infraestructura B2B</title>
+    <title>NEXTERA-SYSTEMS | IA & INFRAESTRUCTURA</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #000; color: #fff; }
-        .serif { font-family: 'Playfair Display', serif; }
-        .text-glow { text-shadow: 0 0 20px rgba(99, 102, 241, 0.4); } /* Brillo Indigo IA */
-        .ai-gradient {
-            background: linear-gradient(135deg, #00ffff 0%, #6366f1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .ai-border {
-            border: 1px solid rgba(0, 255, 255, 0.1);
-            background: rgba(255, 255, 255, 0.01);
-            position: relative;
-        }
-        .ai-border::after {
-            content: '';
-            position: absolute;
-            inset: -1px;
-            background: linear-gradient(135deg, rgba(0,255,255,0.2) 0%, rgba(99,102,241,0.2) 100%);
-            z-index: -1;
-            filter: blur(1px);
-        }
+        body { background-color: #000; color: #fff; font-family: sans-serif; overflow-x: hidden; }
+        .glow-text { text-shadow: 0 0 15px rgba(0, 255, 255, 0.5); }
+        .bg-gradient { background: radial-gradient(circle at 50% 50%, #0a0a1a 0%, #000 80%); }
+        .ai-card { border: 1px solid rgba(0, 255, 255, 0.1); background: rgba(255,255,255,0.02); backdrop-blur: 10px; }
     </style>
 </head>
-<body class="antialiased overflow-x-hidden">
+<body class="bg-gradient">
 
-    <nav class="fixed w-full z-50 backdrop-blur-md border-b border-white/[0.03] bg-black/70">
-        <div class="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
-            <span class="text-[10px] tracking-[0.5em] uppercase font-bold text-white/90">Nextera-Systems</span>
-            <div class="flex space-x-8 text-[9px] tracking-widest uppercase text-white/50">
-                <a href="#soluciones" class="hover:text-white transition">Soluciones</a>
-                <a href="#automatizacion" class="hover:text-white transition">Automatización</a>
-                <a href="#contacto" class="border border-indigo-500/50 px-3 py-1 text-indigo-400 rounded-full hover:bg-indigo-600/10 hover:border-indigo-500 transition btn-glow">Proyectar</a>
-            </div>
-        </div>
+    <nav class="fixed w-full z-50 p-6 flex justify-between items-center backdrop-blur-md">
+        <span class="font-bold tracking-[0.4em] text-xs">NEXTERA-SYSTEMS</span>
+        <a href="#contacto" class="border border-cyan-500 text-cyan-400 px-6 py-2 rounded-full text-xs uppercase tracking-widest hover:bg-cyan-500 hover:text-white transition">Consultoría IA</a>
     </nav>
 
-    <section class="min-h-screen flex flex-col items-center justify-center px-6 text-center" style="transform-style: preserve-3d; background: radial-gradient(circle at 50% 50%, #111 0%, #000 80%);">
-        <span data-aos="fade-down" class="text-xs tracking-[0.4em] uppercase mb-6 block text-gray-500">Business Systems Architecture</span>
-        <h1 data-aos="zoom-out" data-aos-duration="2000" class="text-6xl md:text-9xl font-bold tracking-tighter mb-8 leading-none ai-gradient text-glow" style="transform: translateZ(50px);">
-            EL FUTURO ES UN <span class="serif italic">SISTEMA INTELIGENTE.</span>
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+        <h1 data-aos="zoom-in" class="text-6xl md:text-9xl font-black tracking-tighter mb-6 glow-text">
+            INTEGRACIÓN <br><span class="text-cyan-400 italic">TOTAL DE IA.</span>
         </h1>
-        
-        <p data-aos="fade-up" data-aos-delay="500" class="text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-16 text-white/50" style="transform: translateZ(20px);">
-            En <strong>NEXTERA-SYSTEMS</strong> no diseñamos páginas; construimos autoridad. Elevamos su empresa con soluciones estratégicas de <strong>Inteligencia Artificial</strong> que garantizan escala. Menos ruido, más conversión. Transforme su visión en infraestructura de futuro.
+        <p data-aos="fade-up" data-aos-delay="400" class="max-w-2xl text-xl text-gray-400 font-light">
+            No vendemos páginas. Implementamos <strong>Sistemas Inteligentes</strong> que automatizan su empresa y escalan su autoridad al nivel del futuro.
         </p>
+    </section>
 
-        <a href="#contacto" data-aos="zoom-in" data-aos-delay="1000" class="text-xs tracking-[0.3em] uppercase py-2 border-b-2 border-white text-white hover:text-indigo-400 hover:border-indigo-400 transition" style="transform: translateZ(10px);">
-            Implementar el futuro
+    <section class="py-32 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+            <div data-aos="fade-right" class="ai-card p-12 rounded-3xl border-l-4 border-l-cyan-500">
+                <h2 class="text-3xl font-bold mb-6 text-white uppercase tracking-tight">Soluciones Operativas</h2>
+                <p class="text-gray-400 leading-relaxed mb-6">Facilitamos el trabajo corporativo mediante agentes de IA que gestionan datos, atención y ventas de forma autónoma.</p>
+                <ul class="text-cyan-400 text-sm space-y-2">
+                    <li>+ Automatización de Procesos</li>
+                    <li>+ Análisis Predictivo B2B</li>
+                    <li>+ Infraestructura Escalable</li>
+                </ul>
+            </div>
+            <div data-aos="fade-left" class="ai-card p-12 rounded-3xl border-l-4 border-l-purple-500">
+                <h2 class="text-3xl font-bold mb-6 text-white uppercase tracking-tight">Estética y Poder</h2>
+                <p class="text-gray-400 leading-relaxed mb-6">Nuestros sistemas no solo funcionan; proyectan el estatus tecnológico que su empresa necesita para cerrar contratos de alto ticket.</p>
+                <div class="flex space-x-4">
+                    <div class="h-1 w-full bg-gray-800 rounded-full"><div class="h-1 w-3/4 bg-purple-500 rounded-full"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-40 text-center">
+        <h3 data-aos="fade-up" class="text-sm tracking-[0.8em] text-gray-600 uppercase mb-12">El futuro es un sistema</h3>
+        <a href="mailto:proyectos@nextera-systems.com" class="text-4xl md:text-6xl font-bold hover:text-cyan-400 transition duration-700 underline decoration-cyan-500/20">
+            PROYECTOS@NEXTERA-SYSTEMS.COM
         </a>
     </section>
 
-    <section id="soluciones" class="py-40 px-6 bg-[#030303]">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-24 items-center">
-            <div data-aos="fade-right" class="border-l border-white/10 pl-10">
-                <span class="text-[10px] tracking-[0.4em] text-gray-700 uppercase block mb-4">Ingeniería Corporativa</span>
-                <h2 class="text-4xl md:text-5xl font-bold text-white mb-8 tracking-tighter">Facilitamos su operación, escalamos sus ventas.</h2>
-                <p class="text-lg leading-relaxed text-gray-400">
-                    No creamos sitios estáticos; desarrollamos plataformas de alto rendimiento diseñadas para eliminar la fricción operativa mediante <strong>automatización inteligente y modelos de IA avanzados.</strong>
-                </p>
-            </div>
-            <div class="grid grid-cols-2 gap-6 relative" data-aos="fade-left" data-aos-delay="500">
-                <div class="bg-white/[0.02] border border-white/10 p-6 rounded-2xl animate-pulse">
-                    <span class="text-white text-2xl font-bold">+150%</span>
-                    <p class="text-[10px] uppercase text-gray-500">Eficiencia leads</p>
-                </div>
-                <div class="bg-white/[0.02] border border
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1200, once: false });
+    </script>
+</body>
+</html>

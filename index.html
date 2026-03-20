@@ -3,31 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXTERA-SYSTEMS | Arquitectura de IA B2B</title>
+    <title>NEXTERA-SYSTEMS | High-Performance AI Architecture</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #050505; color: #fff; overflow-x: hidden; }
-        .ai-gradient { background: linear-gradient(135deg, #fff 0%, #6366f1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .glass { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); backdrop-blur: 15px; }
+        :root {
+            --bg-main: #000000;
+            --font-main: 'Plus Jakarta Sans', sans-serif;
+            --font-accent: 'Playfair Display', serif;
+            --cyan-ai: #00f2ff;
+            --green-ai: #00ff88;
+            --purple-ai: #bf00ff;
+        }
+
+        body { font-family: var(--font-main); background-color: var(--bg-main); color: #fff; overflow-x: hidden; }
+        .serif { font-family: var(--font-accent); }
         
-        /* Efecto Escáner IA */
+        /* Efecto Escáner IA - Blindado */
         .scanner-line {
-            position: fixed; top: -100px; left: 0; width: 100%; height: 3px;
-            background: linear-gradient(to bottom, transparent, #6366f1, transparent);
-            box-shadow: 0 0 15px #6366f1; z-index: 100;
-            animation: scan 8s linear infinite; pointer-events: none;
+            position: fixed; top: -100px; left: 0; width: 100%; height: 2px;
+            background: var(--current-color, var(--cyan-ai)); 
+            box-shadow: 0 0 15px var(--current-color, var(--cyan-ai));
+            z-index: 100; animation: scan 10s linear infinite; pointer-events: none; opacity: 0.3;
         }
         @keyframes scan { 0% { top: -10%; } 100% { top: 110%; } }
 
-        /* Marquesina de Avances */
-        .marquee { white-space: nowrap; animation: marquee 30s linear infinite; }
-        @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+        /* Brillo Dinámico Apple Style */
+        #glow-bg { 
+            position: absolute; width: 600px; height: 600px; 
+            background: var(--current-color, var(--cyan-ai)); 
+            filter: blur(180px); opacity: 0.15; transition: all 1s ease;
+            z-index: 0; pointer-events: none;
+        }
 
-        /* Pantalla Interactiva */
-        .screen-content { transition: all 0.4s ease-in-out; }
-        .active-tab { border-color: #6366f1 !important; background: rgba(99,102,241,0.1) !important; color: #fff !important; }
+        /* Selectores: Punto + Nombre (Exacto a lo pedido) */
+        .niche-selector {
+            display: flex; align-items: center; gap: 15px;
+            padding: 12px 24px; border-radius: 100px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            cursor: pointer; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-bottom: 12px; width: fit-content;
+        }
+        .niche-selector:hover { background: rgba(255, 255, 255, 0.08); transform: translateX(10px); }
+        .niche-selector.active { border-color: var(--current-color); background: rgba(255, 255, 255, 0.06); }
+        
+        .dot { width: 10px; height: 10px; border-radius: 50%; transition: 0.4s; }
+        .niche-text { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); }
+        .active .niche-text { color: #fff; }
+
+        /* Mockup de Mac / Laptop Pro */
+        .mac-frame {
+            position: relative; width: 100%; max-width: 650px;
+            aspect-ratio: 16 / 10; background: #111;
+            border-radius: 24px; border: 10px solid #222;
+            box-shadow: 0 50px 100px -20px rgba(0,0,0,0.8);
+            overflow: hidden; transition: transform 0.6s ease;
+        }
+        .mac-frame:hover { transform: scale(1.02) rotateX(2deg); }
+
+        .ai-gradient { 
+            background: linear-gradient(135deg, #fff 0%, var(--current-color, var(--cyan-ai)) 100%); 
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; 
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -35,104 +75,127 @@
     <div class="scanner-line"></div>
 
     <nav class="fixed w-full z-50 backdrop-blur-xl border-b border-white/[0.03] bg-black/60 h-16 flex items-center px-8 justify-between">
-        <span class="text-[10px] tracking-[0.5em] font-bold uppercase">Nextera-Systems</span>
-        <a href="#contacto" class="border border-indigo-500/50 px-4 py-1.5 text-indigo-400 rounded-full text-[9px] uppercase font-bold">Proyectar Futuro</a>
+        <span class="text-[10px] tracking-[0.5em] font-bold uppercase text-white">Nextera-Systems</span>
+        <div class="flex space-x-6">
+            <a href="#demos" class="text-[9px] font-bold uppercase tracking-widest px-5 py-2 border border-white/10 rounded-full hover:bg-white hover:text-black transition duration-700">Explorar Demos</a>
+        </div>
     </nav>
 
     <section class="min-h-screen flex flex-col items-center justify-center text-center px-8 relative">
-        <h1 data-aos="zoom-out" data-aos-duration="2000" class="text-6xl md:text-[8rem] font-bold tracking-tighter leading-none mb-10 ai-gradient">
-            INGENIERÍA <br> <span class="italic font-light">DE AUTONOMÍA.</span>
+        <h1 data-aos="zoom-out" data-aos-duration="2500" class="text-6xl md:text-[8.5rem] font-bold tracking-tighter leading-none mb-10 ai-gradient">
+            INGENIERÍA <br> <span class="serif italic font-light opacity-80">DE AUTONOMÍA.</span>
         </h1>
-        <p data-aos="fade-up" data-aos-delay="500" class="max-w-2xl text-lg text-white/30 font-light italic">
-            "La IA no es una herramienta, es el nuevo sistema operativo de su éxito."
+        <p data-aos="fade-up" data-aos-delay="800" class="max-w-xl text-lg text-white/30 font-light italic">
+            "Transformamos la complejidad operativa en autoridad digital absoluta."
         </p>
     </section>
 
-    <div class="py-4 border-y border-white/5 bg-white/[0.01] overflow-hidden">
-        <div class="marquee flex space-x-20 text-[9px] tracking-[0.4em] uppercase font-bold text-indigo-500/50">
-            <span>• Neural Architecture • Autonomous Agents • Predictive UX • Deep Learning • Neural Architecture • Autonomous Agents • Predictive UX • Deep Learning</span>
-        </div>
-    </div>
-
-    <section class="py-40 px-8 bg-[#030303]">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
-            <div data-aos="fade-right">
-                <h2 class="text-4xl font-bold mb-10 tracking-tighter ai-gradient">Sistemas Sectoriales</h2>
-                <div class="space-y-4">
-                    <button id="btn-taller" onclick="changeDemo('taller')" class="demo-btn active-tab w-full text-left p-6 glass rounded-2xl border border-white/5 transition">
-                        <span class="text-[10px] text-indigo-400 font-bold tracking-widest uppercase">01. Taller Digital</span>
-                    </button>
-                    <button id="btn-ecom" onclick="changeDemo('ecom')" class="demo-btn w-full text-left p-6 glass rounded-2xl border border-white/5 transition">
-                        <span class="text-[10px] text-indigo-400 font-bold tracking-widest uppercase">02. Ecommerce Pro</span>
-                    </button>
-                    <button id="btn-legal" onclick="changeDemo('legal')" class="demo-btn w-full text-left p-6 glass rounded-2xl border border-white/5 transition">
-                        <span class="text-[10px] text-indigo-400 font-bold tracking-widest uppercase">03. Consultoría Legal</span>
-                    </button>
-                </div>
-            </div>
+    <section id="demos" class="py-40 px-8 relative flex items-center justify-center min-h-screen border-t border-white/5">
+        <div id="glow-bg" class="top-1/2 left-3/4 -translate-x-1/2 -translate-y-1/2"></div>
+        
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center z-10">
             
-            <div class="glass p-6 rounded-[2.5rem] border border-indigo-500/20 shadow-2xl shadow-indigo-500/10" data-aos="fade-left">
-                <div class="bg-black aspect-video rounded-2xl overflow-hidden border border-white/10 relative">
-                    <div id="screen-display" class="w-full h-full flex items-center justify-center p-8 transition-opacity duration-500">
+            <div data-aos="fade-right">
+                <span class="text-[10px] tracking-[0.4em] text-white/30 uppercase font-bold mb-4 block">Case Studies in Autonomy</span>
+                <h2 class="text-5xl md:text-7xl font-bold mb-12 tracking-tighter leading-none">DEMOS SECTORIALES:<br>INTELIGENCIA EN <br><span class="ai-gradient italic serif">ACCIÓN B2B.</span></h2>
+                
+                <div class="flex flex-col space-y-2 mb-12">
+                    <div class="niche-selector active" onclick="updateDemo('taller', '#00f2ff', this)">
+                        <div class="dot" style="background: #00f2ff; box-shadow: 0 0 10px #00f2ff;"></div>
+                        <span class="niche-text">Dot Gian (Taller Mopar)</span>
+                    </div>
+                    <div class="niche-selector" onclick="updateDemo('ecom', '#00ff88', this)">
+                        <div class="dot" style="background: #00ff88; box-shadow: 0 0 10px #00ff88;"></div>
+                        <span class="niche-text">Dot Verde (Ecommerce Global)</span>
+                    </div>
+                    <div class="niche-selector" onclick="updateDemo('legal', '#bf00ff', this)">
+                        <div class="dot" style="background: #bf00ff; box-shadow: 0 0 10px #bf00ff;"></div>
+                        <span class="niche-text">Dot Violeta (Legal AI Hub)</span>
+                    </div>
+                </div>
+
+                <div class="space-y-2 text-[10px] tracking-widest font-bold opacity-30 uppercase">
+                    <p><span style="color: #00f2ff;">TALLER MOPAR PRO</span> &nbsp;→&nbsp; <span style="color: #00ff88;">ECOMMERCE GLOBAL</span></p>
+                </div>
+            </div>
+
+            <div data-aos="fade-left" class="flex flex-col items-center">
+                <div class="mac-frame">
+                    <div id="screen-content" class="w-full h-full p-12 flex flex-col justify-center items-start transition-all duration-700 bg-black">
+                        <div class="text-left w-full">
+                            <span class="text-[#00f2ff] text-[10px] font-bold tracking-widest uppercase block mb-2">Nextera Intelligence</span>
+                            <h3 class="text-4xl font-bold mb-6 tracking-tight leading-none">MOPAR <br>Connect.</h3>
+                            <div class="w-full h-24 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center relative overflow-hidden">
+                                <div class="w-3/4 h-1 bg-cyan-500/10 rounded-full">
+                                    <div class="h-full bg-cyan-500 w-3/4 animate-pulse"></div>
+                                </div>
+                            </div>
+                            <p class="text-[8px] text-white/20 mt-6 tracking-[0.4em] uppercase">DIAGNÓSTICO RAM 2500: 88% EFICIENCIA</p>
                         </div>
+                    </div>
+                </div>
+                <div class="mt-12 text-center max-w-sm">
+                    <p id="footer-title" class="text-[10px] font-bold tracking-[0.4em] uppercase mb-4">EJEMPLO: TALLER DIGITAL.</p>
+                    <p id="footer-desc" class="text-xs text-white/40 leading-relaxed font-light">Optimización de agendamiento y diagnóstico predictivo con IA. Eficiencia operativa +40%.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contacto" class="py-60 text-center">
-        <h2 data-aos="fade-up" class="text-[10px] tracking-[0.8em] text-white/20 uppercase mb-16 font-bold">Domine su mercado hoy</h2>
-        <a href="mailto:estrategia@nextera-systems.com" class="text-4xl md:text-7xl font-bold tracking-tighter hover:text-indigo-400 transition duration-1000 ai-gradient">
-            ESTRATEGIA@NEXTERA-SYSTEMS.COM
-        </a>
+    <section class="py-60 text-center border-t border-white/5">
+        <h2 class="text-[10px] tracking-[0.8em] text-white/20 uppercase mb-20 font-bold">Consolide su Autoridad</h2>
+        <a href="mailto:proyectos@nextera-systems.com" class="text-4xl md:text-7xl font-bold tracking-tighter hover:opacity-50 transition duration-1000 ai-gradient">ESTRATEGIA@NEXTERA-SYSTEMS.COM</a>
     </section>
 
-    <footer class="py-10 text-center text-[8px] tracking-[0.5em] text-white/10 uppercase">
-        © 2026 Nextera-Systems | Infrastructure for the 1%
+    <footer class="py-12 text-center text-[9px] tracking-[0.5em] text-white/10 uppercase">
+        © 2026 Nextera-Systems | Julian IA Strategist
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 1500 });
 
-        const content = {
-            taller: `
-                <div class="text-center animate-pulse">
-                    <span class="text-[10px] text-indigo-400 uppercase tracking-widest mb-4 block">Módulo Mecánica IA</span>
-                    <div class="text-2xl font-bold mb-4">DIAGNÓSTICO: OK</div>
-                    <div class="grid grid-cols-3 gap-2 h-10 items-end">
-                        <div class="bg-indigo-500 h-full w-full"></div>
-                        <div class="bg-indigo-500/50 h-2/3 w-full"></div>
-                        <div class="bg-indigo-500/30 h-1/2 w-full"></div>
-                    </div>
-                </div>`,
-            ecom: `
-                <div class="text-center">
-                    <span class="text-[10px] text-indigo-400 uppercase tracking-widest mb-4 block">Ventas en Tiempo Real</span>
-                    <div class="text-4xl font-bold mb-2">$12.450</div>
-                    <div class="text-[8px] text-green-400">+15% CONVERSIÓN HOY</div>
-                </div>`,
-            legal: `
-                <div class="w-full space-y-3">
-                    <div class="h-1 w-full bg-indigo-500/20"></div>
-                    <div class="h-1 w-3/4 bg-white/10"></div>
-                    <div class="h-1 w-full bg-indigo-500/40"></div>
-                    <p class="text-[10px] uppercase text-center mt-4 tracking-tighter">Analizando contrato #492...</p>
-                </div>`
+        const demos = {
+            taller: {
+                color: '#00f2ff',
+                footerT: 'EJEMPLO: TALLER DIGITAL.',
+                footerD: 'Optimización de agendamiento y diagnóstico predictivo con IA. Eficiencia operativa +40%.',
+                html: `<div class="text-left w-full"><span class="text-[#00f2ff] text-[10px] font-bold tracking-widest uppercase block mb-2">Nextera Intelligence</span><h3 class="text-4xl font-bold mb-6 tracking-tight leading-none">MOPAR <br>Connect.</h3><div class="w-full h-24 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center relative overflow-hidden"><div class="w-3/4 h-1 bg-cyan-500/10 rounded-full"><div class="h-full bg-cyan-500 w-3/4 animate-pulse"></div></div></div><p class="text-[8px] text-white/20 mt-6 tracking-[0.4em] uppercase">DIAGNÓSTICO RAM 2500: 88% EFICIENCIA</p></div>`
+            },
+            ecom: {
+                color: '#00ff88',
+                footerT: 'EJEMPLO: ECOMMERCE GLOBAL.',
+                footerD: 'Personalización de ofertas en tiempo real y gestión autónoma de stock para escalar ventas.',
+                html: `<div class="text-left w-full"><span class="text-[#00ff88] text-[10px] font-bold tracking-widest uppercase block mb-2">Nextera Sales</span><h3 class="text-4xl font-bold mb-6 tracking-tight leading-none">VENTAS <br>Autónomas.</h3><div class="w-full h-24 bg-white/5 border border-white/10 rounded-xl flex items-end p-4 space-x-2"><div class="w-full h-1/2 bg-green-500/30"></div><div class="w-full h-full bg-green-500/80"></div><div class="w-full h-2/3 bg-green-500/50"></div></div><p class="text-[8px] text-white/20 mt-6 tracking-[0.4em] uppercase">REVENUE HOY: $14.250 (SYNC OK)</p></div>`
+            },
+            legal: {
+                color: '#bf00ff',
+                footerT: 'EJEMPLO: LEGAL AI HUB.',
+                footerD: 'Procesamiento de contratos y análisis de riesgos operativos mediante modelos privados.',
+                html: `<div class="text-left w-full"><span class="text-[#bf00ff] text-[10px] font-bold tracking-widest uppercase block mb-2">Nextera Legal</span><h3 class="text-4xl font-bold mb-6 tracking-tight leading-none">LEGAL <br>Analysis.</h3><div class="space-y-3"><div class="h-1 bg-white/10 w-full rounded"></div><div class="h-1 bg-white/10 w-3/4 rounded"></div><div class="h-1 bg-purple-500/40 w-full rounded"></div></div><p class="text-[8px] text-white/20 mt-8 tracking-[0.4em] uppercase">ANALIZANDO CLÁUSULAS DE RIESGO...</p></div>`
+            }
         };
 
-        function changeDemo(type) {
-            document.querySelectorAll('.demo-btn').forEach(b => b.classList.remove('active-tab'));
-            document.getElementById(`btn-${type}`).classList.add('active-tab');
-            const display = document.getElementById('screen-display');
-            display.style.opacity = 0;
+        function updateDemo(key, color, btn) {
+            document.querySelectorAll('.niche-selector').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            document.documentElement.style.setProperty('--current-color', color);
+            
+            const screen = document.getElementById('screen-content');
+            const fTitle = document.getElementById('footer-title');
+            const fDesc = document.getElementById('footer-desc');
+
+            [screen, fTitle, fDesc].forEach(el => el.style.opacity = 0);
+
             setTimeout(() => {
-                display.innerHTML = content[type];
-                display.style.opacity = 1;
-            }, 300);
+                const data = demos[key];
+                screen.innerHTML = data.html;
+                fTitle.innerText = data.footerT;
+                fDesc.innerText = data.footerD;
+                [screen, fTitle, fDesc].forEach(el => el.style.opacity = 1);
+            }, 400);
         }
-        
-        window.onload = () => changeDemo('taller');
     </script>
 </body>
 </html>

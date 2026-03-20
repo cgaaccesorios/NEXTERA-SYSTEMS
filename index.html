@@ -3,82 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXTERA-SYSTEMS | High-Performance AI</title>
+    <title>NEXTERA-SYSTEMS | High-Performance AI Architecture</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #000; color: #fff; overflow-x: hidden; }
-        .ai-gradient { background: linear-gradient(135deg, #fff 0%, var(--accent-color, #6366f1) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .glass { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); backdrop-blur: 15px; }
+        :root {
+            --bg-main: #000000;
+            --font-main: 'Plus Jakarta Sans', sans-serif;
+            --font-accent: 'Playfair Display', serif;
+            --accent-default: #6366f1;
+        }
+
+        body { 
+            font-family: var(--font-main); 
+            background-color: var(--bg-main); 
+            color: #fff; 
+            overflow-x: hidden; 
+        }
+
+        .serif { font-family: var(--font-accent); }
         
-        /* Contenedor dinámico de la demo */
         #demo-section { transition: background 0.8s ease; position: relative; }
         .glow-bg { 
-            position: absolute; width: 400px; height: 400px; 
-            background: var(--accent-color, #6366f1); 
-            filter: blur(150px); opacity: 0.15; transition: all 0.8s ease;
+            position: absolute; width: 600px; height: 600px; 
+            background: var(--current-accent, var(--accent-default)); 
+            filter: blur(180px); opacity: 0.15; transition: all 0.8s ease;
             z-index: 0; pointer-events: none;
         }
 
-        /* Botones estilo Apple Color Picker */
+        /* Selector estilo Apple iMac */
         .color-dot {
-            width: 32px; height: 32px; border-radius: 50%; border: 2px solid transparent;
-            cursor: pointer; transition: all 0.3s ease; padding: 2px;
+            width: 38px; height: 38px; border-radius: 50%; border: 2px solid transparent;
+            cursor: pointer; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); padding: 3px;
         }
-        .color-dot:hover { transform: scale(1.2); }
         .color-dot.active { border-color: #fff; transform: scale(1.1); }
         .inner-dot { width: 100%; height: 100%; border-radius: 50%; }
 
-        .mockup-container { transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1); }
-        .mockup-container:hover { transform: scale(1.02); }
+        .ai-gradient { 
+            background: linear-gradient(135deg, #fff 0%, var(--current-accent, var(--accent-default)) 100%); 
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; 
+        }
+
+        #niche-indicator {
+            font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase;
+            color: #fff; opacity: 0.8; margin-bottom: 12px; transition: all 0.4s ease;
+        }
     </style>
 </head>
 <body class="antialiased">
 
     <nav class="fixed w-full z-50 backdrop-blur-xl border-b border-white/[0.03] bg-black/60 h-16 flex items-center px-8 justify-between">
-        <span class="text-[10px] tracking-[0.5em] font-bold uppercase">Nextera-Systems</span>
-        <a href="#contacto" class="border border-white/20 px-4 py-1.5 text-white rounded-full text-[9px] uppercase font-bold hover:bg-white hover:text-black transition">Proyectar Futuro</a>
+        <span class="text-[10px] tracking-[0.5em] font-bold uppercase text-white/90">Nextera-Systems</span>
+        <div class="flex space-x-6">
+             <a href="#contacto" class="text-[9px] uppercase font-bold tracking-widest px-5 py-2 border border-white/10 rounded-full hover:bg-white hover:text-black transition duration-700">
+                Agendar Auditoría
+             </a>
+        </div>
     </nav>
 
-    <section class="min-h-screen flex flex-col items-center justify-center text-center px-8 relative">
-        <h1 data-aos="zoom-out" data-aos-duration="2000" class="text-6xl md:text-[8rem] font-bold tracking-tighter leading-none mb-10 ai-gradient">
-            AUTONOMÍA <br> <span class="italic font-light text-white/50">DEFINIDA.</span>
+    <section class="min-h-screen flex flex-col items-center justify-center text-center px-8">
+        <h1 data-aos="zoom-out" data-aos-duration="2500" class="text-6xl md:text-[8.5rem] font-bold tracking-tighter leading-none mb-10 ai-gradient">
+            AUTONOMÍA <br> <span class="serif italic font-light opacity-80">PROYECTADA.</span>
         </h1>
+        <p data-aos="fade-up" data-aos-delay="800" class="max-w-xl text-lg text-white/30 font-light">
+            Sistemas que no solo ejecutan, sino que <strong>deciden</strong>. Arquitectura B2B de alta gama.
+        </p>
     </section>
 
-    <section id="demo-section" class="py-40 px-8 flex items-center justify-center min-h-screen">
+    <section id="demo-section" class="py-40 px-8 flex items-center justify-center min-h-screen border-t border-white/5">
         <div class="glow-bg top-1/2 left-3/4 -translate-x-1/2 -translate-y-1/2"></div>
         
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center z-10">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-24 items-center z-10">
             
             <div data-aos="fade-right">
-                <span id="niche-label" class="text-[10px] tracking-[0.5em] uppercase font-bold mb-4 block" style="color: var(--accent-color, #6366f1);">Sector Taller</span>
-                <h2 id="niche-title" class="text-5xl md:text-7xl font-bold mb-8 tracking-tighter">MOPAR <br>Intelligence.</h2>
-                <p id="niche-desc" class="text-lg text-white/40 leading-relaxed mb-12 max-w-md">
-                    Sincronización de telemetría RAM 2500. Diagnóstico predictivo de inyectores y gestión de stock automática.
+                <span id="niche-label" class="text-[11px] tracking-[0.6em] uppercase font-bold mb-6 block" style="color: #00f2ff;">Intelligence Ops</span>
+                <h2 id="niche-title" class="text-5xl md:text-8xl font-bold mb-10 tracking-tighter leading-[0.9]">MOPAR <br>Connect.</h2>
+                <p id="niche-desc" class="text-xl text-white/40 leading-relaxed mb-16 max-w-md font-light">
+                    Diagnóstico predictivo para RAM 2500. El sistema detecta fallas antes de que ocurran y gestiona el stock de repuestos automáticamente.
                 </p>
 
-                <div class="flex space-x-6 items-center">
-                    <div class="color-dot active" onclick="switchDemo('taller', '#00f2ff', this)" title="Taller">
-                        <div class="inner-dot" style="background: #00f2ff;"></div>
-                    </div>
-                    <div class="color-dot" onclick="switchDemo('ecom', '#00ff88', this)" title="Ecommerce">
-                        <div class="inner-dot" style="background: #00ff88;"></div>
-                    </div>
-                    <div class="color-dot" onclick="switchDemo('legal', '#bf00ff', this)" title="Legal">
-                        <div class="inner-dot" style="background: #bf00ff;"></div>
+                <div class="flex flex-col items-start space-y-4">
+                    <div id="niche-indicator">Sistema Taller</div>
+                    <div class="flex space-x-6 items-center">
+                        <div class="color-dot active" onclick="switchDemo('taller', '#00f2ff', this, 'Sistema Taller')">
+                            <div class="inner-dot" style="background: #00f2ff;"></div>
+                        </div>
+                        <div class="color-dot" onclick="switchDemo('ecom', '#00ff88', this, 'Ecommerce B2B')">
+                            <div class="inner-dot" style="background: #00ff88;"></div>
+                        </div>
+                        <div class="color-dot" onclick="switchDemo('legal', '#bf00ff', this, 'Legal AI Hub')">
+                            <div class="inner-dot" style="background: #bf00ff;"></div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="mockup-container" data-aos="fade-left">
-                <div class="glass p-3 rounded-[2.5rem] border border-white/10 shadow-2xl">
-                    <div class="bg-black aspect-video rounded-2xl overflow-hidden relative border border-white/5">
-                        <div id="screen-content" class="w-full h-full flex flex-col items-center justify-center p-10 transition-all duration-500">
-                            <svg class="w-20 h-20 mb-6 text-[#00f2ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                            <div class="text-2xl font-bold tracking-tighter">DIAGNÓSTICO RAM 2500</div>
-                            <div class="text-[10px] text-white/30 mt-2 uppercase tracking-widest">Inyectores: 88% Eficiencia</div>
+            <div data-aos="fade-left" class="relative group">
+                <div class="relative bg-[#080808] p-4 rounded-[3rem] border border-white/10 shadow-2xl">
+                    <div class="bg-black aspect-video rounded-[2rem] overflow-hidden relative border border-white/5">
+                        <div id="screen-content" class="w-full h-full flex flex-col items-center justify-center p-12 transition-all duration-700">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold tracking-tighter mb-4">SYNC: RAM 2500</div>
+                                <div class="text-[10px] text-white/20 uppercase tracking-[0.4em] animate-pulse">Scanning Components...</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -88,11 +117,15 @@
     </section>
 
     <section id="contacto" class="py-60 text-center">
-        <h2 class="text-[10px] tracking-[0.8em] text-white/20 uppercase mb-16 font-bold">Domine su mercado</h2>
-        <a href="mailto:proyectos@nextera-systems.com" class="text-4xl md:text-7xl font-bold tracking-tighter hover:text-indigo-400 transition duration-1000 ai-gradient">
+        <h2 class="text-[11px] tracking-[0.8em] text-white/20 uppercase mb-20 font-bold">Domine su industria</h2>
+        <a href="mailto:proyectos@nextera-systems.com" class="text-4xl md:text-7xl font-bold tracking-tighter hover:opacity-50 transition duration-1000 ai-gradient">
             ESTRATEGIA@NEXTERA-SYSTEMS.COM
         </a>
     </section>
+
+    <footer class="py-12 border-t border-white/5 text-center text-[9px] tracking-[0.5em] text-white/20 uppercase">
+        © 2026 Nextera-Systems | Julian IA Collaborator
+    </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -100,61 +133,56 @@
 
         const demos = {
             taller: {
-                label: 'Sector Taller',
-                title: 'MOPAR <br>Intelligence.',
-                desc: 'Sincronización de telemetría RAM 2500. Diagnóstico predictivo de inyectores y gestión de stock automática.',
+                label: 'Intelligence Ops',
+                title: 'MOPAR <br>Connect.',
+                desc: 'Diagnóstico predictivo para RAM 2500. El sistema detecta fallas antes de que ocurran y gestiona el stock de repuestos automáticamente.',
                 color: '#00f2ff',
-                icon: '<svg class="w-20 h-20 mb-6 text-[#00f2ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>',
-                status: 'DIAGNÓSTICO RAM 2500',
-                meta: 'Inyectores: 88% Eficiencia'
+                content: '<div class="text-center"><div class="text-3xl font-bold tracking-tighter mb-4">SYNC: RAM 2500</div><div class="text-[10px] text-white/20 uppercase tracking-[0.4em] animate-pulse">Scanning Components...</div></div>'
             },
             ecom: {
-                label: 'Sector Ecommerce',
+                label: 'Conversion Hub',
                 title: 'VENTAS <br>Autónomas.',
-                desc: 'IA que predice el comportamiento de compra. Ofertas personalizadas dinámicas que aumentan el ticket promedio en 25%.',
+                desc: 'IA de comportamiento que personaliza la oferta B2B en tiempo real, aumentando la retención de clientes en un 40%.',
                 color: '#00ff88',
-                icon: '<svg class="w-20 h-20 mb-6 text-[#00ff88]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>',
-                status: 'REVENUE HOY: $14.250',
-                meta: 'Conversión: +12% vs ayer'
+                content: '<div class="text-center"><div class="text-5xl font-bold tracking-tighter mb-2">$28.400</div><div class="text-[10px] text-green-400 uppercase tracking-[0.4em]">Optimización Activa</div></div>'
             },
             legal: {
-                label: 'Sector Legal',
+                label: 'Legal Neural',
                 title: 'LEGAL <br>Analysis.',
-                desc: 'Procesamiento de contratos en segundos. Detección de riesgos y cláusulas abusivas mediante modelos de lenguaje privados.',
+                desc: 'Auditoría automática de contratos. Detección de riesgos operativos mediante modelos de lenguaje de alta precisión.',
                 color: '#bf00ff',
-                icon: '<svg class="w-20 h-20 mb-6 text-[#bf00ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M3 6l3 1m0 0l-3 9a5 5 0 0010 0l-3-9m-3 1y1m0 1H6m0 2h3m3-3v1m0 1h3M6 21v-4a2 2 0 012-2h8a2 2 0 012 2v4"></path></svg>',
-                status: 'CASO #492 ANALIZADO',
-                meta: 'Riesgo contractual: Bajo'
+                content: '<div class="w-full px-10 space-y-4"><div class="h-1 bg-white/10 w-full"></div><div class="h-1 bg-purple-500/40 w-full"></div><div class="h-1 bg-white/10 w-2/3"></div><div class="text-[8px] text-center text-white/20 uppercase mt-4 tracking-widest">Analizando Cláusulas...</div></div>'
             }
         };
 
-        function switchDemo(type, color, btn) {
-            // Actualizar botones (Apple style)
+        function switchDemo(type, color, btn, nicheName) {
+            // Actualizar dots
             document.querySelectorAll('.color-dot').forEach(d => d.classList.remove('active'));
             btn.classList.add('active');
 
-            // Cambiar variables de color
-            document.documentElement.style.setProperty('--accent-color', color);
+            // Actualizar etiqueta del nombre de nicho (Apple Style)
+            document.getElementById('niche-indicator').innerText = nicheName;
+
+            // Cambiar color de acento
+            document.documentElement.style.setProperty('--current-accent', color);
             
-            // Animación de salida y cambio de contenido
             const screen = document.getElementById('screen-content');
             const title = document.getElementById('niche-title');
             const desc = document.getElementById('niche-desc');
             const label = document.getElementById('niche-label');
 
-            screen.style.opacity = 0;
-            [title, desc, label].forEach(el => el.style.opacity = 0);
+            [screen, title, desc, label].forEach(el => el.style.opacity = 0);
 
             setTimeout(() => {
                 const data = demos[type];
                 label.innerText = data.label;
+                label.style.color = color;
                 title.innerHTML = data.title;
                 desc.innerText = data.desc;
-                screen.innerHTML = `${data.icon}<div class="text-2xl font-bold tracking-tighter">${data.status}</div><div class="text-[10px] text-white/30 mt-2 uppercase tracking-widest">${data.meta}</div>`;
+                screen.innerHTML = data.content;
                 
-                screen.style.opacity = 1;
-                [title, desc, label].forEach(el => el.style.opacity = 1);
-            }, 300);
+                [screen, title, desc, label].forEach(el => el.style.opacity = 1);
+            }, 400);
         }
     </script>
 </body>
